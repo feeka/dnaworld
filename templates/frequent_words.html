@@ -1,0 +1,49 @@
+ {% extends "base.html" %}
+ {% block content %}
+  <div class= "container">
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <div classs="form-group">
+          {{ form.dna_seq.label(class="form-control-label") }}
+          {{ form.dna_seq(class="form-control form-control-lg",rows="5") }}
+
+        </div>
+        <br>
+        <div classs="form-group">
+            {{ form.k_val.label(class="form-control-label") }}
+            {{ form.k_val(class="form-control form-control-lg",rows="1") }}
+            
+          </div>
+        <br>
+          <div classs="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+      </fieldset>
+    </form>
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        Want to get more info on algorithm? <a class="ml-2" href="http://rosalind.info/problems/ba1b/">CLICK HERE</a>
+      </small>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class= "alert alert-dismissible alert-{{ category }}">
+
+          {{message}}
+        </div>
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <hr>
+    <h5>Output</h5>
+    <hr>
+    <ul>
+      {% for item in result %}
+          <li>{{item}}</li>
+      {% endfor %}
+    </ul>    
+
+{% endblock %}
+

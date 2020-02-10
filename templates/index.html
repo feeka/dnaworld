@@ -1,0 +1,84 @@
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <title>BIOAlg</title>
+  <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='bootstrap.css')}}" />
+<script type="text/javascript" src="{{ url_for('static', 
+filename = 'bootstrap.js') }}" ></script>
+<script type="text/javascript" src="{{ url_for('static', 
+filename = 'jquery-3.4.1.min.js') }}" ></script>
+
+</head>
+<body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">BIOAlg<sup>BETA</sup></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="navbar-collapse" name="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="../">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../algorithms">Algorithms <span class="sr-only">(current)</span></a>
+
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+                      <div class="container ">
+                          <hr class="my-4">
+                          <h5 class="display-5"><center>Algorithms developed</center></h5>
+
+                          <hr class="my-4">
+                          
+                            <div class="container">
+                              <table class="table table-hover">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Input</th>
+                                    <th scope="col">Output</th>
+                                    <th scope="col">Look</th>
+                                    <th scope="col">Info</th>
+                                  </tr>
+                                </thead>
+                                  
+                                  {% for item in algos %}
+                                  <tbody>
+                                  <tr class="table-light">
+                                    <th scope="row">{{item.name}}</th>
+                                    <td>{{item.input}}</td>
+                                    <td>{{item.output}}</td>
+                                    <td> <a type="button" href="home/{{item.route}}" class="btn btn-primary">&#x1f441</a></td>
+                                    <td><a type="button" class="btn btn-info" href="{{item.info}}">&#8505;</a></td>
+                                  </tr>
+                                  </tbody>
+                                  {% endfor %}
+
+                                  </table>
+                              </div>
+                              <br>
+                              <br>
+                              <br>
+                              <!-- Footer -->
+<footer class="navbar-dark page-footer bottom font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://www.linkedin.com/in/feeka/"> Fikrat Talibli.</a>
+      Contact me via email: fikrattalibli@gmail.com
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer --> 
+                            </div>
+
+</body>
+</html>
