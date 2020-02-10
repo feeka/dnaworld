@@ -1,1 +1,1 @@
-web: python index.py runserver 0.0.0.0:5000
+web: python index.py runserver 127.0.0.1:5000
