@@ -5,48 +5,58 @@
   <link type="text/css" rel="stylesheet"
         href="{{ url_for('static',
               filename='bootstrap.css')}}" />
-<script type="text/javascript" src="{{ url_for('static', 
-filename = 'bootstrap.js') }}" ></script>
-<script type="text/javascript" src="{{ url_for('static', 
-filename = 'jquery-3.4.1.min.js') }}" ></script>
+<script src="{{ url_for('static', filename='jquery-3.2.1.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
+<script src="{{ url_for('static', filename='bootstrap.js')}}"></script>
+
 
 </head>
 <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">BIOAlg<sup>BETA</sup></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="navbar-collapse" name="navbarColor01">
-      <ul class="navbar-nav mr-auto">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">||<sup>BIOALGOS</sup>||</a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbarColor01" style="">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-          <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="algorithms">Algorithms </a>
-        </li>
-        
-      </ul>
-    </div>
-  </nav>
+        <a class="nav-link" href="../">Home<span class="sr-only">(current)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../blog">Blog</span></a>
+      </li>
+<li class="nav-item">
+        <a class="nav-link" href="../algorithms">Algorithms </span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
                       <div class="container jumbotron ">
                               <h4 class="display-4">Bioinformatics</h4>
                               <hr class="my-4">
-                              <p>This page is created in educational purposes to demonstrate the algorithms that are widely used by bioinformaticians. The page is inspired by prof. Pavel Pevzner's book and coursera course from UCSD.</p>
+                              <p>This page is created in educational purposes to demonstrate the algorithms that are widely used by bioinformaticians. The page is inspired by prof. Pavel Pevzner's book and coursera course from UCSD. Additionaly rosalind</p>
                               <p class="lead">
                                 <a class="btn btn-primary btn-lg" href="https://www.coursera.org/specializations/bioinformatics?" role="button">Learn more about course</a>
                               </p>
                             </div>
-<div class="container">
+<div class="container">	
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm">
 <div class="text-center">
   <img class="img float-left" src="static/prof.jpg" class="rounded" alt="...">
 </div>    </div>
-    <div class="col-sm-9">
+    <div class="col-sm">
     <h4>About me</h4>
         <p><i><b>I am Fikrat Talibli - highly motivated master student. Interest in bioinformatics fostered me to create given page. At the same time this page can serve as a good example of my skills in this field. Algorithms solved in this webpage are inspired both by<a href="https://www.coursera.org/specializations/bioinformatics"> coursera.org</a> and <a href="http://rosalind.info/problems/locations/"> rosalind.info</a>. I will make daily to weekly updates to this website. Codes are available on my github page. The webpage is written using python's flask library and algorithms are developed on python. Enough about me - let's jump into <a href="algorithms">the algorithms page!</a></b></i> </p>
+    </div>
+	<div class="col-sm">
+    <h4>Contact info</h4>
+       <ul> <li><b>Github account:</b>  <a href ="https://github.com/feeka">/feeka</a> </li>
+		<li><b>LinkedIn account:</b>  <a href ="https://www.linkedin.com/in/feeka">/feeka</a> </li>
+		<li><b>CV:</b>  <a href ="https://drive.google.com/open?id=1_QcDX8_-c1XKS3hd9bR2gb0iGoRtSJTF">CV</a> </li>
+		<li><b>repl:</b>  <a href ="https://repl.it/@FikratTalibli">/@FikratTalibli</a> </li>
+		</ul>
     </div>
   </div>
 </div>
