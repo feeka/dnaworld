@@ -74,6 +74,22 @@ ALGORITHMS=[
     },
 ]
 
+DATA_F = [
+    {
+        'name':'Introduction',
+        'author': 'feeka',
+        'date': '23.02.2020',
+        'description': 'Here I would like to give an idea of why I decided to write little blogs.',
+        'route': '../'
+    },
+    {
+        'name':'DNA as a storage? Part 1.',
+        'description': "The idea of possibility to consider DNA as a data storage medium is both exciting and risky. The idea has been around since 90's, however back then it seemed surreal just as touch screen mobile phone or any other innovation.",
+        'author': 'feeka',
+        'date' : '23.02.2020',
+        'route': 'dnaasstorage'
+    },
+]
 app.config['SECRET_KEY']="a286171ec581aac9872a89d13e6226a6"
 @app.route('/')
 def about():
@@ -82,7 +98,13 @@ def about():
 @app.route('/algorithms')
 def hello_world():
     return render_template('index.html',algos=ALGORITHMS)
+@app.route('/blog')
+def blog():
+    return render_template('blog.html',data=DATA_F)
 
+@app.route('/blog/dnaasstorage')
+def blog_dna_as_storage():
+    return render_template('blog_dna_storage_one.html')
 
 @app.route('/home/freqwords', methods=('GET', 'POST'))
 def freqwords():
@@ -190,6 +212,9 @@ def medianstring():
         print(result)
         return render_template('medianstring.html',title="Median String", form=form, result=result)
     return render_template('medianstring.html',title="Median String", form=form)
+
+
+
 
 import os
 port = int(os.environ.get("PORT", 5000))

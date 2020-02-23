@@ -1,0 +1,25 @@
+<h3><b>DNA as a data storage?</b> </h3>
+        <p>The idea of possibility to consider DNA as a data storage medium is both exciting and risky. The idea has been around since 90's, however back then it seemed surreal just as touch screen mobile phone or any other innovation. <span>Possibly many readers would ask me why in the world shall we store the data in DNA when we have SSDs, data centers, HDDs and so on. The answer to that question lays in unique properties of DNA.</span> Probably bioinformaticians, who read this guessed them already, however I would like to clearly state properties anyways:</p>
+        <ul>
+          <li>Self-assembly potential – DNA has been successfully used as a building block of a number of small scale self-assembly based computers(quoted directly)</li>
+          <li>Stability - DNA can be recovered after thousands of years</li>
+          <li>Capacity - this fact is the gem! <b>3 grams of DNA is 6,4Zetabytes (in the data world ~ 2.7 ZB)!</b></li>
+        </ul>
+        <p>Here I would like to mention that those ideas are not mine, they come from <a href="http://marconisociety.org/storage-meets-dna-how-to-fit-a-data-center-into-a-shoebox/">here</a>; professor Yakoobi layed ideas clearly in his article so I highly suggest to read it. </p>
+        <p>In this blogpost I would like to take more of a tutorial approach to appreciate the exceptionally intellectual idea and let the readers see the synthesis of error control codes with bioinformatics.In order to begin explaining the schema I considered it my duty to explain bioinformatics(by a chance there can be someone who is coming from other field) in this blogpost and then coding part in part two of DNA as a storage.</p> 
+        <h4><b><i>Biology</i></b></h4>
+        <p>This section is going to be a very short explanation of biology and bioinformatics because currently state of the art of this research does not require us to know more about the corresponding concepts.</p>
+        <div class="row">
+        <div class="col-sm">
+          <p><b><i>DNA</i></b> is a macromolecule(biopolymer) that consists of smaller molecules(monomers) - <b><i>nucleotides</i></b>. <b><i>Nucleotides</i></b> are "<b>nitrogenous base</b> + sugar base + phosphate group". Nitrogenous base is one of four {<b><font color="green">T</font></b>,<b><font color="orange">A</font></b>,<b><font color="pink">G</font></b>,<b><font color="#EFCC00">C</font></b>} => our alphabet will consist of four bases. <b>DNA sequence or strand</b> – is one side of DNA. ECC researchers are interested in single strand that is composed of sequence of any combination of those 4 bases {T,A,G,C}. This is almost everything that is required in order to get into much bigger picture of what the actual work is about. I would like note that the most important part here is single strand of DNA. The basic idea of storage is that we store data in synthetically generated molecules. But what do I mean by synthetically generated molecule? How in the world are we going to insert the data there?</p>
+        </div>
+
+        <div class="col-sm">
+          <img class="img float-left" src="static/dna_khan.jpg" class="rounded" alt="...">
+          </div>
+          </div>
+          <h5>Synthesis</h5>
+          <p>What is data in digital communication terms? According to the definition <font color="#000080">digital data</font> is information stored on a computer system as a series of 0's and 1's in a binary language. So, put in simple terms, data is just a string composition(vector) of 0's and 1's. Well, what is DNA sequence? Yep, you guessed it - string composition of {"A","T","C","G"}. Now there are techniques of mapping the data into quartenary alphabet which means we simply map 0 and 1 into {00, 01, 10, 11}. I think readers at this point understand where I am going with this. </p>
+          <div class="row">
+          <div class="col-sm-3">
+          <div class="card border-dark" style="max-width: 20rem;">

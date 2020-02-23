@@ -7,6 +7,9 @@
   <link type="text/css" rel="stylesheet"
         href="{{ url_for('static',
               filename='bootstrap.css')}}" />
+	  <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='custom.css')}}" />		  
 <script src="{{ url_for('static', filename='jquery-3.2.1.min.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.js')}}"></script>
@@ -14,7 +17,7 @@
 
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">||<sup>BIOALGOS</sup>||</a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -37,7 +40,7 @@
                       <div class="container jumbotron ">
                               <h4 class="display-4">Bioinformatics</h4>
                               <hr class="my-4">
-                              <p>This page is created in educational purposes to demonstrate the algorithms that are widely used by bioinformaticians. The page is inspired by prof. Pavel Pevzner's book and coursera course from UCSD. Additionaly rosalind</p>
+                              <p><b><i>This page is created for educational purposes to demonstrate the algorithms that are widely used by bioinformaticians. The page is inspired by prof. Pavel Pevzner's book and coursera course from UCSD. Additionaly algorithms presented on this webpage are classical solutions of rosalind algorithms. In Blog section I am going to describe every algorithm presented in implementation page.</i></b></p>
                               <p class="lead">
                                 <a class="btn btn-primary btn-lg" href="https://www.coursera.org/specializations/bioinformatics?" role="button">Learn more about course</a>
                               </p>
@@ -50,7 +53,7 @@
 </div>    </div>
     <div class="col-sm">
     <h4>About me</h4>
-        <p><i><b>I am Fikrat Talibli - highly motivated master student. Interest in bioinformatics fostered me to create given page. At the same time this page can serve as a good example of my skills in this field. Algorithms solved in this webpage are inspired both by<a href="https://www.coursera.org/specializations/bioinformatics"> coursera.org</a> and <a href="http://rosalind.info/problems/locations/"> rosalind.info</a>. I will make daily to weekly updates to this website. Codes are available on my github page. The webpage is written using python's flask library and algorithms are developed on python. Enough about me - let's jump into <a href="algorithms">the algorithms page!</a></b></i> </p>
+        <p>I am Fikrat Talibli - highly motivated master student. Interest in bioinformatics fostered me to create given page. At the same time this page can serve as a good example of my skills in this field. Algorithms solved in this webpage are inspired both by<a href="https://www.coursera.org/specializations/bioinformatics"> coursera.org</a> and <a href="http://rosalind.info/problems/locations/"> rosalind.info</a>. I will make daily to weekly updates to this website. Codes are available on my github page. The webpage is written using python's flask library and algorithms are developed on python. Enough about me - let's jump into <a href="algorithms">the algorithms page!</p>
     </div>
 	<div class="col-sm">
     <h4>Contact info</h4>
@@ -67,16 +70,15 @@
 <br>
 <br>
 <!-- Footer -->
-<footer class="navbar page-footer bottom font-small blue">
+<footer class="page-footer font-small blue pt-4">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-      <a href="https://www.linkedin.com/in/feeka/"> Fikrat Talibli.</a>
-      Contact me via email: fikrattalibli@gmail.com
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><h5>© 2020 Copyright. Contact me: fikrattalibli@gmail.com</h5>
+    <p> </p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </body>
 </html>
