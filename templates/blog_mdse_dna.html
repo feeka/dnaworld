@@ -43,9 +43,80 @@
 <br>
 <div class="container">
   <div class="row">
+    <div class="col-sm">
+      <a type="button" class="btn btn-secondary btn-lg" href="../blog"><h5>&#9778;</h5></a>
+    </div>
+    <div class="col-sm">
+      <h3 class="display-5 float-left">Domain specific language for Bioinformatics? MDSE meets Bioinformatics.</h3>
 
+    </div>
+    <div class="col-sm">
+      <hr class="my-3">
+
+      <div class="row">
+        </div>
+    </div>
   </div>
+  <hr class="my-3">
+
+  <div class="row">
+    <div class="col-sm">
+     <p>Can we generalize the tasks in bioinfomatics and model them? Majority of tasks in bioinformatics have a very repetitive pattern, so
+     examples are string manipulations(frequent words, reverse complement, median strings, skew problem and e.g.), sequencing using de Bruijn graphs, 
+    dynamic programming for alignment and clustering(algorithms like hierarchical clustering). Well, now what we must do for proceeding with this idea
+  is to define our model(I want to note that model is not going to be perfect). 
+
+   </p>
+   <div class="card border-success mb-12" >
+    
+    <div class="card-body">
+      <h5 class="card-header">Model</h5>
+      <p class="card-text"><ul> 
+        <li><b>Model</b> is formal representation of entities and relationships in real world with certain correspondence for certain purpose.</p></li>
+       <li>In other words we describe model such that it has:<ul>
+         <li> certain <b>abstraction/reduction</b> - removing details that do not serve purpose; </li>
+         <li> <b>projection</b> - statements on model hold for entities from our field(make sense);</li>
+         <li> <b>pragmatics</b>- cann replace its original for specific question.</li>
+     </ul></li>      
+       </ul>
+      </p>
+    </div>
+  </div>
+  
+     <br>
+  <p>Bioinformaticians probably have a certain sense of where I am going with this. We are left with one more important question: is this everything 
+     that this post was about? Well, no. Interesting part is we want to <b>model the model</b>. In other words we are trying to generalize tasks that are oftenly
+     used by bioinformaticians in order to develop some kind of Domain Specific Language - DSL. Maybe, majority of readers heard about SQL - structured
+     query language. It is a DSL, domain-specific language used in programming and designed for managing data held in a relational database management 
+     system (RDBMS). </p>
+     <p>The correct notion for "modeling the model" is called <b>meta-model</b>. And to me the idea of meta-modeling is very fascinating. Let us  give terminology
+       for meta-model.
+       <div class="card border-success mb-12" >
+    
+        <div class="card-body">
+          <h5 class="card-header">Meta-model</h5>
+          <p class="card-text">
+            <li><b>Meta-model</b> precise definition of parts and rules needed to create valid models.
+          </p>
+        </div>
+      </div>
+   </p>
+   <p>
+     How is meta-modeling done? I am going to bring one association of what meta-models are. Take any language in the world: it has <b>syntax</b> and
+     <b>semantics</b>. Exactly same thing here: we have language - let's say called <font color="green"><b>Biolang</b></font>. All we are left to do
+     is to set rules for both syntax and semantics.
+     Figure below shows syntax and semantics.
+
+   </p>
+   
 </div>
+   <div class="col-sm"><img class="img float-left" src="{{url_for('static', filename='mdse.jpg')}}" class="rounded" alt="..."></div>
+  <div class="col-sm"> 
+    <br>
+    <br>
+    <p>In the next part of this post we are going to set the rules for a specific language, like we came up with "<font color="green"><b>Biolang</b></font>".</p></div>
+  </div>
+  </div>
 <br>
 <br>
 <br>
