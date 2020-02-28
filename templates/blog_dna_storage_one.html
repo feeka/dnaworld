@@ -9,7 +9,7 @@
               filename='bootstrap.css')}}" />
 	  <link type="text/css" rel="stylesheet"
         href="{{ url_for('static',
-              filename='custom.css')}}" />		  
+              filename='custom.css')}}" />
 <script src="{{ url_for('static', filename='jquery-3.2.1.min.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.js')}}"></script>
@@ -41,10 +41,23 @@
 <br>
 <br>
 <br>
-<div class="container">	
+<div class="container">
   <div class="row">
     <div class="col-sm">
-    <h3><b>DNA as a data storage?</b> </h3>
+      <a type="button" class="btn btn-secondary btn-lg" href="../blog"><h5><i><-</i></h5></a>
+    </div>
+    <div class="col-sm">
+      <h3 class="display-5 float-left">DNA as a storage? Part 1.</h3>
+
+    </div>
+    <div class="col-sm">
+
+    </div>
+  </div>
+<hr class="my-3">
+
+  <div class="row">
+    <div class="col-sm">
         <p>The idea of possibility to consider DNA as a data storage medium is both exciting and risky. The idea has been around since 90's, however back then it seemed surreal just as touch screen mobile phone or any other innovation. <span>Possibly many readers would ask me why in the world shall we store the data in DNA when we have SSDs, data centers, HDDs and so on. The answer to that question lays in unique properties of DNA.</span> Probably bioinformaticians, who read this guessed them already, however I would like to clearly state properties anyways:</p>
         <ul>
           <li>Self-assembly potential – DNA has been successfully used as a building block of a number of small scale self-assembly based computers(quoted directly)</li>
@@ -52,7 +65,7 @@
           <li>Capacity - this fact is the gem! <b>3 grams of DNA is 6,4Zetabytes (in the data world ~ 2.7 ZB)!</b></li>
         </ul>
         <p>Here I would like to mention that those ideas are not mine, they come from <a href="http://marconisociety.org/storage-meets-dna-how-to-fit-a-data-center-into-a-shoebox/">here</a>; professor Yakoobi layed ideas clearly in his article so I highly suggest to read it. </p>
-        <p>In this blogpost I would like to take more of a tutorial approach to appreciate the exceptionally intellectual idea and let the readers see the synthesis of error control codes with bioinformatics.In order to begin explaining the schema I considered it my duty to explain bioinformatics(by a chance there can be someone who is coming from other field) in this blogpost and then coding part in part two of DNA as a storage.</p> 
+        <p>In this blogpost I would like to take more of a tutorial approach to appreciate the exceptionally intellectual idea and let the readers see the synthesis of error control codes with bioinformatics.In order to begin explaining the schema I considered it my duty to explain bioinformatics(by a chance there can be someone who is coming from other field) in this blogpost and then coding part in part two of DNA as a storage.</p>
         <h4><b><i>Biology</i></b></h4>
         <p>This section is going to be a very short explanation of biology and bioinformatics because currently state of the art of this research does not require us to know more about the corresponding concepts.</p>
         <div class="row">
@@ -61,14 +74,14 @@
         </div>
 
         <div class="col-sm">
-          <img class="img float-left" src="static/dna_khan.jpg" class="rounded" alt="...">
+          <img class="img float-left" src="{{url_for('static', filename='dna_khan.JPG')}}" class="rounded" alt="...">
           </div>
           </div>
           <h5>Synthesis</h5>
           <p>What is data in digital communication terms? According to the definition <font color="#000080">digital data</font> is information stored on a computer system as a series of 0's and 1's in a binary language. So, put in simple terms, data is just a string composition(vector) of 0's and 1's. Well, what is DNA sequence? Yep, you guessed it - string composition of {"A","T","C","G"}. Now there are techniques of mapping the data into quartenary alphabet which means we simply map 0 and 1 into {00, 01, 10, 11}. I think readers at this point understand where I am going with this. </p>
           <div class="row">
           <div class="col-sm-3">
-          <div class="card border-dark" style="max-width: 20rem;">  
+          <div class="card border-dark" style="max-width: 20rem;">
   <div class="card-header">Mapping scheme</div>
   <div class="card-body">
     <p class="card-text"><b>"A"</b> -> <i>00</i>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<b>"G"</b> -> <i>10</i></p>
@@ -77,7 +90,7 @@
   </div>
   </div>
   <div class="col-sm-9">
-    <div class="card bg-light" style="max-width: 60rem;">  
+    <div class="card bg-light" style="max-width: 60rem;">
   <div class="card-header">Example of mapping</div>
   <div class="card-body">
     <p class="card-text"> 01 10 11 10 11 11 00 11 00 01 11 -> 'C G T G T T A T A C T' </p>

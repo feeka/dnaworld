@@ -22,7 +22,7 @@ ALGORITHMS=[
         'output' : 'A collection of space-separated integers specifying all starting positions where Pattern appears as a substring of Genome',
         'route':'patmatch',
         'info':'http://rosalind.info/problems/ba1d/'
-    }, 
+    },
     {
         'name':'Pattern Count',
         'input': 'Strings Text and Pattern',
@@ -89,6 +89,13 @@ DATA_F = [
         'date' : '23.02.2020',
         'route': 'dnaasstorage'
     },
+    {
+        'name':'Domain specific language for bioinformatics?',
+        'description':'The main idea in this post is to consider concepts of Model Driven Software Engineering as a potential to create DSL for bioinformaticians. Why is it useful?',
+        'author':'feeka',
+        'date':'24.02.2020',
+        'route':'dslforbioinformatics'
+    }
 ]
 app.config['SECRET_KEY']="a286171ec581aac9872a89d13e6226a6"
 @app.route('/')
@@ -105,6 +112,10 @@ def blog():
 @app.route('/blog/dnaasstorage')
 def blog_dna_as_storage():
     return render_template('blog_dna_storage_one.html')
+
+@app.route('/blog/dslforbioinformatics')
+def blog_dsl_for_bio():
+    return render_template('blog_mdse_dna.html')
 
 @app.route('/home/freqwords', methods=('GET', 'POST'))
 def freqwords():
@@ -218,4 +229,4 @@ def medianstring():
 
 import os
 port = int(os.environ.get("PORT", 5000))
-app.run(debug=True, host='0.0.0.0', port=port)
+app.run(debug=False, host='0.0.0.0', port=port)

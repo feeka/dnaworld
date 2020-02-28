@@ -9,7 +9,7 @@
               filename='bootstrap.css')}}" />
 	  <link type="text/css" rel="stylesheet"
         href="{{ url_for('static',
-              filename='custom.css')}}" />		  
+              filename='custom.css')}}" />
 <script src="{{ url_for('static', filename='jquery-3.2.1.min.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.bundle.js')}}"></script>
 <script src="{{ url_for('static', filename='bootstrap.js')}}"></script>
@@ -41,14 +41,14 @@
 <br>
 <br>
 <br>
-<div class="container">	
+<div class="container">
   {% for item in data %}
-  <div class="card text-white bg-info " >
-  <div class="card-header">{{item.name}}</div>
+  <div class="card bg-light " >
+  <div class="card-header"><h4>{{item.name}}</h4></div>
   <div class="card-body">
   <p>{{item.description}}</p>
     <p class="card-text">Author: {{item.author}} | Date posted: {{item.date}}</p>
-    <a type="button" class="btn btn-outline-secondary" href="blog/{{item.route}}">Read more</a>
+    <a type="button" class="btn btn-primary" href="blog/{{item.route}}">Read more</a>
   </div>
 </div>
 <br>
